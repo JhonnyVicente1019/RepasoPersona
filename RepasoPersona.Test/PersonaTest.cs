@@ -10,13 +10,10 @@ namespace RepasoPersona.Test
         [Fact]
         public void Contructor()
         {
-            
-            {
-                Pepito = new Persona("Pepito", "Gomez", 0);
-                Assert.Equal("Pepito", Pepito.Nombre);
-                Assert.Equal("Gomez", Pepito.Apellido);
-                Assert.Equal(0, Pepito.Efectivo);
-            }
+            Pepito = new Persona("Pepito", "Gomez", 0);
+            Assert.Equal("Pepito", Pepito.Nombre);
+            Assert.Equal("Gomez", Pepito.Apellido);
+            Assert.Equal(0, Pepito.Efectivo);
         }
     }
 }
