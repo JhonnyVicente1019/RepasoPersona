@@ -19,26 +19,16 @@ namespace RepasoPersona.Core
         public void Debitar(double monto)
         {
             if(monto <= 0)
-            {
                 throw new Exception("El monto debe ser > a 0");
-            }
             if(Efectivo < monto)
-            {
                 throw new Exception("Saldo insuficiente");
                 Efectivo -= monto;
-            }           
         }
         public void Acreditar(double monto)
         {
             if(monto < 0)
-            {
-                throw new Exception("El monto debe ser > o");
-            }
-            if(Efectivo > monto)
-            {
-                throw new Exception("Saldo insuficiente");
-                Efectivo += monto;
-            }
-        }
+            throw new Exception("El monto debe ser > o");
+            Efectivo += monto;
+        }            
     }
 }
